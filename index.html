@@ -657,9 +657,9 @@ function playTick(){
 function checkMidnight(){
   const now=new Date();
   // ── TESTING: change date/time below ──
-  const isApril30=now.getMonth()===3&&now.getDate()===29;
+  const isApril30=now.getMonth()===3&&now.getDate()===30;
   if(!isApril30) return;
-  const birthdayMidnight=new Date(now.getFullYear(),3,29,22,47,0,0);
+  const birthdayMidnight=new Date(now.getFullYear(),3,30,0,0,0,0);
   // ── END TESTING SECTION ──
   const msLeft=birthdayMidnight-now;
   if(msLeft>0&&msLeft<=23000&&!countdownRunning){
